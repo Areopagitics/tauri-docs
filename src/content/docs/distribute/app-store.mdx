@@ -186,7 +186,7 @@ Create a Info.plist file in the src-tauri folder:
 
 - Entitlements
 
-Your app must include the App Sandbox capability to be distributed in the App Store.
+Your app must include the App Sandbox capability and have network access enabled to be distributed in the App Store.
 Additionally, you must also set your App ID and Team ID in the code signing entitlements.
 
 Create a `Entitlements.plist` file in the `src-tauri` folder:
@@ -197,6 +197,8 @@ Create a `Entitlements.plist` file in the `src-tauri` folder:
 <plist version="1.0">
 <dict>
     <key>com.apple.security.app-sandbox</key>
+    <true/>
+    <key>com.apple.security.network.client</key>
     <true/>
     <key>com.apple.application-identifier</key>
     <string>$TEAM_ID.$IDENTIFIER</string>
